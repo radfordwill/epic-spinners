@@ -1,0 +1,27 @@
+/**
+ * All of the CSS for the admin-specific functionality is
+ * included in this file.
+ */
+
+.body-epic-spinners {
+	padding-top: 54px;
+}
+.body-epic-spinners p {
+	font-size: 14px;
+	font-weight: bolder;
+}
+.body-epic-spinners .img-thumbnail {
+	margin-bottom: 5px;
+}
+.body-epic-spinners .footer-span {
+	font-size: 12px;
+	color: #fff;
+	background-color: black;
+}
+.body-epic-spinners .footer-link {
+	font-size: 11px;
+}
+
+i.epic-spinners-mce-icon {
+	background-image: url('../../assets/images/icon-mce-32.png');
+}
