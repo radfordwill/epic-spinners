@@ -1,1 +1,1 @@
-# epic_spinners
+# epic-spinners
