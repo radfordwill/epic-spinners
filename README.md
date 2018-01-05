@@ -50,7 +50,7 @@ A: It may show up here.
 
 ## Screenshots
 ### 1. Epic Spinners
-![Epic Spinners](https://radford.online/wp-content/plugins/epic-spinners/assets/images/screenshot-1.png)
+![Epic Spinners](https://raw.githubusercontent.com/radfordwill/epic-spinners/0fc3dbfc2c11fc06c8796f5fa4354ddd983a49c5/assets/images/screenshot-1.png)
 
 
 
