@@ -6,7 +6,7 @@ if ( !defined( 'WPINC' ) ) {
 
 /**
  * Provides a admin area view for the plugin
- * Plugin URI: https://github.com/radfordwill/epic_spinners
+ * Plugin URI: https://wordpress.org/plugins/kiip/
  * Version: 3.1.6
  * @author     Will Radford <radford.will@gmail.com>
  * @link       http://radford.online/
@@ -26,6 +26,8 @@ $plugin_data = epic_spinners::init();
 $plugin_name_version = $plugin_data->get_plugin_data()[ 'Name' ] . ' v' . $plugin_data->get_plugin_data()[ 'Version' ];
 $epic_spinners_the_url = $plugin_data->epic_spinners_the_url();
 $epic_spinners_plugin_lang = epic_spinners::TEXTDOMAIN;
+$epic_spinners_plugin_textarea = $plugin_data->epic_spinners_admin_page_textarea();
+
 
 ?> <!-- This file  primarily consists of HTML with a little bit of PHP. -->
 <div class="wrap body-epic-spinners">
@@ -41,7 +43,7 @@ $epic_spinners_plugin_lang = epic_spinners::TEXTDOMAIN;
 		<div class="row">
 			<div class="col-lg-4">
       <h2><?php _e('Epic Spinners Animated Icons For Wordpress', $epic_spinners_plugin_lang)?>	</h2>			<p class="font-weight-bold small">
-					<?php echo _e('Easily use epicmax\'s animated spinner icons in your website\'s content with the editor\'s built in buttons.', $epic_spinners_plugin_lang)?>
+					<?php echo _e('Easily use epicmax\'s animated spinner icons in your website\'s content. Add icons with the editor\'s built in buttons or with shortodes.', $epic_spinners_plugin_lang)?>
 				</p>
 			</div>
 			<div class="col-lg-4">
@@ -55,7 +57,7 @@ $epic_spinners_plugin_lang = epic_spinners::TEXTDOMAIN;
 						<form name="_xclick" action="https://www.paypal.com/yt/cgi-bin/webscr" method="post">
 							<input type="hidden" name="cmd" value="_xclick">
 							<input type="hidden" name="business" value="power.sell2002@gmail.com">
-							<input type="hidden" name="item_name" value="Epic Spinners - Donations">
+							<input type="hidden" name="item_name" value="Kiip For Wordpress - Donations">
 							<input type="hidden" name="currency_code" value="USD">
 							<tr class="bg-primary">
 								<th scope="row">
@@ -74,11 +76,57 @@ $epic_spinners_plugin_lang = epic_spinners::TEXTDOMAIN;
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-lg-4 ">
+				<p>
+					<?php _e('Editor Buttons', $epic_spinners_plugin_lang)?> <br><img class="rounded float-left img-thumbnail" src="<?php echo $epic_spinners_the_url; ?>assets/images/mce-shortcode-scr-shot.jpg" alt="shortcodes screenshot"/><br>
+					<span class="float-right">
+						<?php _e('Shortcode buttons are located in the post and page editors.', $epic_spinners_plugin_lang)?>
+					</span>
+				</p>
+				<p></p>
+				<p><kbd>Shortcodes List</kbd> </p>
+				<div>
+				<?php /* @TODO: define min lines for textarea?*/?>
+				<?php echo $epic_spinners_plugin_textarea; ?>
+				</div>
+			</div>
+			<div class="col-lg-4 align-baseline">
+
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-lg-12">
 
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="lead"></p>
+				<p class="lead">
+					<strong>
+						<?php _e('Epic Spinners WP Settings', $epic_spinners_plugin_lang)?>
+					</strong>
+				</p>
+				<form method="post" action="options.php">
+					<?php settings_fields( 'epic-spinners-settings-group' ); ?>
+					<?php do_settings_sections( 'epic-spinners-settings-group' ); ?>
+					<table class="form-table">
 
+						<tr valign="top">
+							<th scope="row">
+								<?php _e('Setting', $epic_spinners_plugin_lang)?>
+							</th>
+							<td><input required type="text" name="epic-spinners-setting" value="<?php echo esc_attr( get_option('epic-spinners-setting') ); ?>"/>
+							</td>
+						</tr>
+
+
+
+					</table>
+					<?php submit_button(); ?>
+				</form>
+			</div>
+		</div>
 	</div>
 	<footer class="footer">
 		<div class="container">

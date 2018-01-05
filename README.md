@@ -61,4 +61,7 @@ A: It may show up here.
 * First version for wordpress
 
 
+### 1.0.1
+* Rewrite for shortcodes
+
 ## Upgrade Notice

@@ -2,22 +2,18 @@
  * All of the CSS for the public-facing functionality is
  * included in this file.
  */
-
 /* css styling taken from epic spinners by epicmax
  * from http://epic-spinners.epicmax.co/#/
  */
-
 .orbit-spinner, .orbit-spinner * {
 				box-sizing: border-box;
 }
-
 .orbit-spinner {
 				height: 55px;
 				width: 55px;
 				border-radius: 50%;
 				perspective: 800px;
 }
-
 .orbit-spinner .orbit {
 				position: absolute;
 				box-sizing: border-box;
@@ -25,28 +21,24 @@
 				height: 100%;
 				border-radius: 50%;
 }
-
 .orbit-spinner .orbit:nth-child(1) {
 				left: 0%;
 				top: 0%;
 				animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
 				border-bottom: 3px solid;
 }
-
 .orbit-spinner .orbit:nth-child(2) {
 				right: 0%;
 				top: 0%;
 				animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
 				border-right: 3px solid;
 }
-
 .orbit-spinner .orbit:nth-child(3) {
 				right: 0%;
 				bottom: 0%;
 				animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
 				border-top: 3px solid;
 }
-
 @keyframes orbit-spinner-orbit-one-animation {
 				0% {
 								transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -55,7 +47,6 @@
 								transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
 				}
 }
-
 @keyframes orbit-spinner-orbit-two-animation {
 				0% {
 								transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
@@ -64,7 +55,6 @@
 								transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
 				}
 }
-
 @keyframes orbit-spinner-orbit-three-animation {
 				0% {
 								transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
@@ -73,24 +63,20 @@
 								transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 				}
 }
-
 .atom-spinner, .atom-spinner * {
 				box-sizing: border-box;
 }
-
 .atom-spinner {
 				height: 60px;
 				width: 60px;
 				overflow: hidden;
 }
-
 .atom-spinner .spinner-inner {
 				position: relative;
 				display: block;
 				height: 100%;
 				width: 100%;
 }
-
 .atom-spinner .spinner-circle {
 				display: block;
 				position: absolute;
@@ -100,7 +86,6 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 }
-
 .atom-spinner .spinner-line {
 				position: absolute;
 				width: 100%;
@@ -114,44 +99,36 @@
 				border-top-style: solid;
 				border-top-color: transparent;
 }
-
 .atom-spinner .spinner-line:nth-child(1) {
 				animation: atom-spinner-animation-1 1s linear infinite;
 				transform: rotateZ(120deg) rotateX(66deg) rotateZ(0deg);
 }
-
 .atom-spinner .spinner-line:nth-child(2) {
 				animation: atom-spinner-animation-2 1s linear infinite;
 				transform: rotateZ(240deg) rotateX(66deg) rotateZ(0deg);
 }
-
 .atom-spinner .spinner-line:nth-child(3) {
 				animation: atom-spinner-animation-3 1s linear infinite;
 				transform: rotateZ(360deg) rotateX(66deg) rotateZ(0deg);
 }
-
 @keyframes atom-spinner-animation-1 {
 				100% {
 								transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
 				}
 }
-
 @keyframes atom-spinner-animation-2 {
 				100% {
 								transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
 				}
 }
-
 @keyframes atom-spinner-animation-3 {
 				100% {
 								transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
 				}
 }
-
 .flower-spinner, .flower-spinner * {
 				box-sizing: border-box;
 }
-
 .flower-spinner {
 				height: 70px;
 				width: 70px;
@@ -160,19 +137,16 @@
 				align-items: center;
 				justify-content: center;
 }
-
 .flower-spinner .dots-container {
 				height: calc(70px / 7);
 				width: calc(70px / 7);
 }
-
 .flower-spinner .smaller-dot {
 				height: 100%;
 				width: 100%;
 				border-radius: 50%;
 				animation: flower-spinner-smaller-dot-animation 2.5s 0s infinite both;
 }
-
 .flower-spinner .bigger-dot {
 				height: 100%;
 				width: 100%;
@@ -180,7 +154,6 @@
 				border-radius: 50%;
 				animation: flower-spinner-bigger-dot-animation 2.5s 0s infinite both;
 }
-
 @keyframes flower-spinner-bigger-dot-animation {
 				0%, 100% {
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
@@ -196,7 +169,6 @@
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
 				}
 }
-
 @keyframes flower-spinner-smaller-dot-animation {
 				0%, 100% {
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
@@ -208,11 +180,9 @@
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
 				}
 }
-
 .pixel-spinner, .pixel-spinner * {
 				box-sizing: border-box;
 }
-
 .pixel-spinner {
 				height: 70px;
 				width: 70px;
@@ -221,14 +191,12 @@
 				justify-content: center;
 				align-items: center;
 }
-
 .pixel-spinner .pixel-spinner-inner {
 				width: calc(70px / 7);
 				height: calc(70px / 7);
 				box-shadow: 15px 15px 0 0, -15px -15px 0 0, 15px -15px 0 0, -15px 15px 0 0, 0 15px 0 0, 15px 0 0 0, -15px 0 0 0, 0 -15px 0 0;
 				animation: pixel-spinner-animation 2000ms linear infinite;
 }
-
 @keyframes pixel-spinner-animation {
 				50% {
 								box-shadow: 20px 20px 0px 0px, -20px -20px 0px 0px, 20px -20px 0px 0px, -20px 20px 0px 0px, 0px 10px 0px 0px, 10px 0px 0px 0px, -10px 0px 0px 0px, 0px -10px 0px 0px;
@@ -240,16 +208,13 @@
 								transform: rotate(360deg);
 				}
 }
-
 .hollow-dots-spinner, .hollow-dots-spinner * {
 				box-sizing: border-box;
 }
-
 .hollow-dots-spinner {
 				height: 15px;
 				width: calc(30px * 3);
 }
-
 .hollow-dots-spinner .dot {
 				width: 15px;
 				height: 15px;
@@ -260,19 +225,15 @@
 				transform: scale(0);
 				animation: hollow-dots-spinner-animation 1000ms ease infinite 0ms;
 }
-
 .hollow-dots-spinner .dot:nth-child(1) {
 				animation-delay: calc(300ms * 1);
 }
-
 .hollow-dots-spinner .dot:nth-child(2) {
 				animation-delay: calc(300ms * 2);
 }
-
 .hollow-dots-spinner .dot:nth-child(3) {
 				animation-delay: calc(300ms * 3);
 }
-
 @keyframes hollow-dots-spinner-animation {
 				50% {
 								transform: scale(1);
@@ -282,11 +243,9 @@
 								opacity: 0;
 				}
 }
-
 .intersecting-circles-spinner, .intersecting-circles-spinner * {
 				box-sizing: border-box;
 }
-
 .intersecting-circles-spinner {
 				height: 70px;
 				width: 70px;
@@ -296,7 +255,6 @@
 				justify-content: center;
 				align-items: center;
 }
-
 .intersecting-circles-spinner .spinnerBlock {
 				animation: intersecting-circles-spinners-animation 1200ms linear infinite;
 				transform-origin: center;
@@ -304,7 +262,6 @@
 				height: 35px;
 				width: 35px;
 }
-
 .intersecting-circles-spinner .circle {
 				display: block;
 				border: 2px solid currentColor;
@@ -315,42 +272,34 @@
 				left: 0;
 				top: 0;
 }
-
 .intersecting-circles-spinner .circle:nth-child(1) {
 				left: 0;
 				top: 0;
 }
-
 .intersecting-circles-spinner .circle:nth-child(2) {
 				left: calc(35px * -0.36);
 				top: calc(35px * 0.2);
 }
-
 .intersecting-circles-spinner .circle:nth-child(3) {
 				left: calc(35px * -0.36);
 				top: calc(35px * -0.2);
 }
-
 .intersecting-circles-spinner .circle:nth-child(4) {
 				left: 0;
 				top: calc(35px * -0.36);
 }
-
 .intersecting-circles-spinner .circle:nth-child(5) {
 				left: calc(35px * 0.36);
 				top: calc(35px * -0.2);
 }
-
 .intersecting-circles-spinner .circle:nth-child(6) {
 				left: calc(35px * 0.36);
 				top: calc(35px * 0.2);
 }
-
 .intersecting-circles-spinner .circle:nth-child(7) {
 				left: 0;
 				top: calc(35px * 0.36);
 }
-
 @keyframes intersecting-circles-spinners-animation {
 				from {
 								transform: rotate(0deg);
@@ -359,17 +308,14 @@
 								transform: rotate(360deg);
 				}
 }
-
 .radar-spinner, .radar-spinner * {
 				box-sizing: border-box;
 }
-
 .radar-spinner {
 				height: 60px;
 				width: 60px;
 				position: relative;
 }
-
 .radar-spinner .circle {
 				position: absolute;
 				height: 100%;
@@ -378,39 +324,32 @@
 				left: 0;
 				animation: radar-spinner-animation 2s infinite;
 }
-
 .radar-spinner .circle:nth-child(1) {
 				padding: calc(60px * 5 * 2 * 0 / 110);
 				animation-delay: 300ms;
 }
-
 .radar-spinner .circle:nth-child(2) {
 				padding: calc(60px * 5 * 2 * 1 / 110);
 				animation-delay: 300ms;
 }
-
 .radar-spinner .circle:nth-child(3) {
 				padding: calc(60px * 5 * 2 * 2 / 110);
 				animation-delay: 300ms;
 }
-
 .radar-spinner .circle:nth-child(4) {
 				padding: calc(60px * 5 * 2 * 3 / 110);
 				animation-delay: 0ms;
 }
-
 .radar-spinner .circle-inner, .radar-spinner .circle-inner-container {
 				height: 100%;
 				width: 100%;
 				border-radius: 50%;
 				border: calc(60px * 5 / 110) solid transparent;
 }
-
 .radar-spinner .circle-inner {
 				border-left-color: currentColor;
 				border-right-color: currentColor;
 }
-
 @keyframes radar-spinner-animation {
 				50% {
 								transform: rotate(180deg);
@@ -419,11 +358,9 @@
 								transform: rotate(0deg);
 				}
 }
-
 .scaling-squares-spinner, .scaling-squares-spinner * {
 				box-sizing: border-box;
 }
-
 .scaling-squares-spinner {
 				height: 65px;
 				width: 65px;
@@ -436,7 +373,6 @@
 				animation-iteration-count: infinite;
 				transform: rotate(0deg);
 }
-
 .scaling-squares-spinner .square {
 				height: calc(65px * 0.25 / 1.3);
 				width: calc(65px * 0.25 / 1.3);
@@ -447,23 +383,18 @@
 				animation-duration: 1250ms;
 				animation-iteration-count: infinite;
 }
-
 .scaling-squares-spinner .square:nth-child(1) {
 				animation-name: scaling-squares-spinner-animation-child-1;
 }
-
 .scaling-squares-spinner .square:nth-child(2) {
 				animation-name: scaling-squares-spinner-animation-child-2;
 }
-
 .scaling-squares-spinner .square:nth-child(3) {
 				animation-name: scaling-squares-spinner-animation-child-3;
 }
-
 .scaling-squares-spinner .square:nth-child(4) {
 				animation-name: scaling-squares-spinner-animation-child-4;
 }
-
 @keyframes scaling-squares-animation {
 				50% {
 								transform: rotate(90deg);
@@ -472,42 +403,35 @@
 								transform: rotate(180deg);
 				}
 }
-
 @keyframes scaling-squares-spinner-animation-child-1 {
 				50% {
 								transform: translate(150%, 150%) scale(2, 2);
 				}
 }
-
 @keyframes scaling-squares-spinner-animation-child-2 {
 				50% {
 								transform: translate(-150%, 150%) scale(2, 2);
 				}
 }
-
 @keyframes scaling-squares-spinner-animation-child-3 {
 				50% {
 								transform: translate(-150%, -150%) scale(2, 2);
 				}
 }
-
 @keyframes scaling-squares-spinner-animation-child-4 {
 				50% {
 								transform: translate(150%, -150%) scale(2, 2);
 				}
 }
-
 .half-circle-spinner, .half-circle-spinner * {
 				box-sizing: border-box;
 }
-
 .half-circle-spinner {
 				width: 60px;
 				height: 60px;
 				border-radius: 100%;
 				position: relative;
 }
-
 .half-circle-spinner .circle {
 				content: "";
 				position: absolute;
@@ -516,17 +440,14 @@
 				border-radius: 100%;
 				border: calc(60px / 10) solid transparent;
 }
-
 .half-circle-spinner .circle.circle-1 {
 				border-top-color: currentColor;
 				animation: half-circle-spinner-animation 1s infinite;
 }
-
 .half-circle-spinner .circle.circle-2 {
 				border-bottom-color: currentColor;
 				animation: half-circle-spinner-animation 1s infinite alternate;
 }
-
 @keyframes half-circle-spinner-animation {
 				0% {
 								transform: rotate(0deg);
@@ -535,11 +456,9 @@
 								transform: rotate(360deg);
 				}
 }
-
 .trinity-rings-spinner, .trinity-rings-spinner * {
 				box-sizing: border-box;
 }
-
 .trinity-rings-spinner {
 				height: 66px;
 				width: 66px;
@@ -552,7 +471,6 @@
 				overflow: hidden;
 				box-sizing: border-box;
 }
-
 .trinity-rings-spinner .circle {
 				position: absolute;
 				display: block;
@@ -560,28 +478,24 @@
 				border: 3px solid currentColor;
 				opacity: 1;
 }
-
 .trinity-rings-spinner .circle:nth-child(1) {
 				height: 60px;
 				width: 60px;
 				animation: trinity-rings-spinner-circle1-animation 1.5s infinite linear;
 				border-width: 3px;
 }
-
 .trinity-rings-spinner .circle:nth-child(2) {
 				height: calc(60px * 0.65);
 				width: calc(60px * 0.65);
 				animation: trinity-rings-spinner-circle2-animation 1.5s infinite linear;
 				border-width: 2px;
 }
-
 .trinity-rings-spinner .circle:nth-child(3) {
 				height: calc(60px * 0.1);
 				width: calc(60px * 0.1);
 				animation: trinity-rings-spinner-circle3-animation 1.5s infinite linear;
 				border-width: 1px;
 }
-
 @keyframes trinity-rings-spinner-circle1-animation {
 				0% {
 								transform: rotateZ(20deg) rotateY(0deg);
@@ -590,7 +504,6 @@
 								transform: rotateZ(100deg) rotateY(360deg);
 				}
 }
-
 @keyframes trinity-rings-spinner-circle2-animation {
 				0% {
 								transform: rotateZ(100deg) rotateX(0deg);
@@ -599,7 +512,6 @@
 								transform: rotateZ(0deg) rotateX(360deg);
 				}
 }
-
 @keyframes trinity-rings-spinner-circle3-animation {
 				0% {
 								transform: rotateZ(100deg) rotateX(-360deg);
@@ -608,11 +520,9 @@
 								transform: rotateZ(-360deg) rotateX(360deg);
 				}
 }
-
 .fulfilling-square-spinner, .fulfilling-square-spinner * {
 				box-sizing: border-box;
 }
-
 .fulfilling-square-spinner {
 				height: 50px;
 				width: 50px;
@@ -620,7 +530,6 @@
 				border: 4px solid currentColor;
 				animation: fulfilling-square-spinner-animation 4s infinite ease;
 }
-
 .fulfilling-square-spinner .spinner-inner {
 				vertical-align: top;
 				display: inline-block;
@@ -629,7 +538,6 @@
 				opacity: 1;
 				animation: fulfilling-square-spinner-inner-animation 4s infinite ease-in;
 }
-
 @keyframes fulfilling-square-spinner-animation {
 				0% {
 								transform: rotate(0deg);
@@ -647,7 +555,6 @@
 								transform: rotate(360deg);
 				}
 }
-
 @keyframes fulfilling-square-spinner-inner-animation {
 				0% {
 								height: 0%;
@@ -665,11 +572,9 @@
 								height: 0%;
 				}
 }
-
 .circles-to-rhombuses-spinner, .circles-to-rhombuses-spinner * {
 				box-sizing: border-box;
 }
-
 .circles-to-rhombuses-spinner {
 				height: 15px;
 				width: calc( (15px + 15px * 1.125) * 3);
@@ -677,7 +582,6 @@
 				align-items: center;
 				justify-content: center
 }
-
 .circles-to-rhombuses-spinner .circle {
 				height: 15px;
 				width: 15px;
@@ -689,20 +593,16 @@
 				background: transparent;
 				animation: circles-to-rhombuses-animation 1200ms linear infinite;
 }
-
 .circles-to-rhombuses-spinner .circle:nth-child(1) {
 				animation-delay: calc(150ms * 1);
 				margin-left: 0
 }
-
 .circles-to-rhombuses-spinner .circle:nth-child(2) {
 				animation-delay: calc(150ms * 2);
 }
-
 .circles-to-rhombuses-spinner .circle:nth-child(3) {
 				animation-delay: calc(150ms * 3);
 }
-
 @keyframes circles-to-rhombuses-animation {
 				0% {
 								border-radius: 10%;
@@ -720,23 +620,19 @@
 								border-radius: 10%;
 				}
 }
-
 @keyframes circles-to-rhombuses-background-animation {
 				50% {
 								opacity: 0.4;
 				}
 }
-
 .semipolar-spinner, .semipolar-spinner * {
 				box-sizing: border-box;
 }
-
 .semipolar-spinner {
 				height: 65px;
 				width: 65px;
 				position: relative;
 }
-
 .semipolar-spinner .ring {
 				border-radius: 50%;
 				position: absolute;
@@ -745,7 +641,6 @@
 				border-left-color: currentColor;
 				animation: semipolar-spinner-animation 2s infinite;
 }
-
 .semipolar-spinner .ring:nth-child(1) {
 				height: calc(65px - 65px * 0.2 * 0);
 				width: calc(65px - 65px * 0.2 * 0);
@@ -754,7 +649,6 @@
 				animation-delay: calc(2000ms * 0.1 * 4);
 				z-index: 5;
 }
-
 .semipolar-spinner .ring:nth-child(2) {
 				height: calc(65px - 65px * 0.2 * 1);
 				width: calc(65px - 65px * 0.2 * 1);
@@ -763,7 +657,6 @@
 				animation-delay: calc(2000ms * 0.1 * 3);
 				z-index: 4;
 }
-
 .semipolar-spinner .ring:nth-child(3) {
 				height: calc(65px - 65px * 0.2 * 2);
 				width: calc(65px - 65px * 0.2 * 2);
@@ -772,7 +665,6 @@
 				animation-delay: calc(2000ms * 0.1 * 2);
 				z-index: 3;
 }
-
 .semipolar-spinner .ring:nth-child(4) {
 				height: calc(65px - 65px * 0.2 * 3);
 				width: calc(65px - 65px * 0.2 * 3);
@@ -781,7 +673,6 @@
 				animation-delay: calc(2000ms * 0.1 * 1);
 				z-index: 2;
 }
-
 .semipolar-spinner .ring:nth-child(5) {
 				height: calc(65px - 65px * 0.2 * 4);
 				width: calc(65px - 65px * 0.2 * 4);
@@ -790,23 +681,19 @@
 				animation-delay: calc(2000ms * 0.1 * 0);
 				z-index: 1;
 }
-
 @keyframes semipolar-spinner-animation {
 				50% {
 								transform: rotate(360deg) scale(0.7);
 				}
 }
-
 .self-building-square-spinner, .self-building-square-spinner * {
 				box-sizing: border-box;
 }
-
 .self-building-square-spinner {
 				height: 40px;
 				width: 40px;
 				top: calc( -10px * 2 / 3);
 }
-
 .self-building-square-spinner .square {
 				height: 10px;
 				width: 10px;
@@ -819,47 +706,36 @@
 				opacity: 0;
 				animation: self-building-square-spinner 6s infinite;
 }
-
 .self-building-square-spinner .square:nth-child(1) {
 				animation-delay: calc(300ms * 6);
 }
-
 .self-building-square-spinner .square:nth-child(2) {
 				animation-delay: calc(300ms * 7);
 }
-
 .self-building-square-spinner .square:nth-child(3) {
 				animation-delay: calc(300ms * 8);
 }
-
 .self-building-square-spinner .square:nth-child(4) {
 				animation-delay: calc(300ms * 3);
 }
-
 .self-building-square-spinner .square:nth-child(5) {
 				animation-delay: calc(300ms * 4);
 }
-
 .self-building-square-spinner .square:nth-child(6) {
 				animation-delay: calc(300ms * 5);
 }
-
 .self-building-square-spinner .square:nth-child(7) {
 				animation-delay: calc(300ms * 0);
 }
-
 .self-building-square-spinner .square:nth-child(8) {
 				animation-delay: calc(300ms * 1);
 }
-
 .self-building-square-spinner .square:nth-child(9) {
 				animation-delay: calc(300ms * 2);
 }
-
 .self-building-square-spinner .clear {
 				clear: both;
 }
-
 @keyframes self-building-square-spinner {
 				0% {
 								opacity: 0;
@@ -877,11 +753,9 @@
 								top: inherit;
 				}
 }
-
 .swapping-squares-spinner, .swapping-squares-spinner * {
 				box-sizing: border-box;
 }
-
 .swapping-squares-spinner {
 				height: 65px;
 				width: 65px;
@@ -891,7 +765,6 @@
 				justify-content: center;
 				align-items: center;
 }
-
 .swapping-squares-spinner .square {
 				height: calc(65px * 0.25 / 1.3);
 				width: calc(65px * 0.25 / 1.3);
@@ -902,62 +775,51 @@
 				position: absolute;
 				animation-iteration-count: infinite;
 }
-
 .swapping-squares-spinner .square:nth-child(1) {
 				animation-name: swapping-squares-animation-child-1;
 				animation-delay: 500ms;
 }
-
 .swapping-squares-spinner .square:nth-child(2) {
 				animation-name: swapping-squares-animation-child-2;
 				animation-delay: 0ms;
 }
-
 .swapping-squares-spinner .square:nth-child(3) {
 				animation-name: swapping-squares-animation-child-3;
 				animation-delay: 500ms;
 }
-
 .swapping-squares-spinner .square:nth-child(4) {
 				animation-name: swapping-squares-animation-child-4;
 				animation-delay: 0ms;
 }
-
 @keyframes swapping-squares-animation-child-1 {
 				50% {
 								transform: translate(150%, 150%) scale(2, 2);
 				}
 }
-
 @keyframes swapping-squares-animation-child-2 {
 				50% {
 								transform: translate(-150%, 150%) scale(2, 2);
 				}
 }
-
 @keyframes swapping-squares-animation-child-3 {
 				50% {
 								transform: translate(-150%, -150%) scale(2, 2);
 				}
 }
-
 @keyframes swapping-squares-animation-child-4 {
 				50% {
 								transform: translate(150%, -150%) scale(2, 2);
 				}
 }
-
 .fulfilling-bouncing-circle-spinner, .fulfilling-bouncing-circle-spinner * {
 				box-sizing: border-box;
 }
-
 .fulfilling-bouncing-circle-spinner {
 				height: 60px;
 				width: 60px;
 				position: relative;
 				animation: fulfilling-bouncing-circle-spinner-animation infinite 4000ms ease;
 }
-
 .fulfilling-bouncing-circle-spinner .orbit {
 				height: 60px;
 				width: 60px;
@@ -968,7 +830,6 @@
 				border: calc(60px * 0.03) solid currentColor;
 				animation: fulfilling-bouncing-circle-spinner-orbit-animation infinite 4000ms ease;
 }
-
 .fulfilling-bouncing-circle-spinner .circle {
 				height: 60px;
 				width: 60px;
@@ -980,7 +841,6 @@
 				animation: fulfilling-bouncing-circle-spinner-circle-animation infinite 4000ms ease;
 				transform: rotate(0deg) scale(1);
 }
-
 @keyframes fulfilling-bouncing-circle-spinner-animation {
 				0% {
 								transform: rotate(0deg);
@@ -989,7 +849,6 @@
 								transform: rotate(360deg);
 				}
 }
-
 @keyframes fulfilling-bouncing-circle-spinner-orbit-animation {
 				0% {
 								transform: scale(1);
@@ -1010,7 +869,6 @@
 								transform: scale(1);
 				}
 }
-
 @keyframes fulfilling-bouncing-circle-spinner-circle-animation {
 				0% {
 								transform: scale(1);
@@ -1051,11 +909,9 @@
 								transform: scale(1);
 				}
 }
-
 .fingerprint-spinner, .fingerprint-spinner * {
 				box-sizing: border-box;
 }
-
 .fingerprint-spinner {
 				height: 64px;
 				width: 64px;
@@ -1063,7 +919,6 @@
 				overflow: hidden;
 				position: relative;
 }
-
 .fingerprint-spinner .spinner-ring {
 				position: absolute;
 				border-radius: 50%;
@@ -1076,86 +931,71 @@
 				right: 0;
 				top: 0;
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(1) {
 				height: calc(60px / 9 + 0 * 60px / 9);
 				width: calc(60px / 9 + 0 * 60px / 9);
 				animation-delay: calc(50ms * 1);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(2) {
 				height: calc(60px / 9 + 1 * 60px / 9);
 				width: calc(60px / 9 + 1 * 60px / 9);
 				animation-delay: calc(50ms * 2);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(3) {
 				height: calc(60px / 9 + 2 * 60px / 9);
 				width: calc(60px / 9 + 2 * 60px / 9);
 				animation-delay: calc(50ms * 3);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(4) {
 				height: calc(60px / 9 + 3 * 60px / 9);
 				width: calc(60px / 9 + 3 * 60px / 9);
 				animation-delay: calc(50ms * 4);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(5) {
 				height: calc(60px / 9 + 4 * 60px / 9);
 				width: calc(60px / 9 + 4 * 60px / 9);
 				animation-delay: calc(50ms * 5);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(6) {
 				height: calc(60px / 9 + 5 * 60px / 9);
 				width: calc(60px / 9 + 5 * 60px / 9);
 				animation-delay: calc(50ms * 6);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(7) {
 				height: calc(60px / 9 + 6 * 60px / 9);
 				width: calc(60px / 9 + 6 * 60px / 9);
 				animation-delay: calc(50ms * 7);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(8) {
 				height: calc(60px / 9 + 7 * 60px / 9);
 				width: calc(60px / 9 + 7 * 60px / 9);
 				animation-delay: calc(50ms * 8);
 }
-
 .fingerprint-spinner .spinner-ring:nth-child(9) {
 				height: calc(60px / 9 + 8 * 60px / 9);
 				width: calc(60px / 9 + 8 * 60px / 9);
 				animation-delay: calc(50ms * 9);
 }
-
 @keyframes fingerprint-spinner-animation {
 				100% {
 								transform: rotate( 360deg);
 				}
 }
-
 .spring-spinner, .spring-spinner * {
 				box-sizing: border-box;
 }
-
 .spring-spinner {
 				height: 60px;
 				width: 60px;
 }
-
 .spring-spinner .spring-spinner-part {
 				overflow: hidden;
 				height: calc(60px / 2);
 				width: 60px;
 }
-
 .spring-spinner .spring-spinner-part.bottom {
 				transform: rotate(180deg) scale(-1, 1);
 }
-
 .spring-spinner .spring-spinner-rotator {
 				width: 60px;
 				height: 60px;
@@ -1167,7 +1007,6 @@
 				animation: spring-spinner-animation 3s ease-in-out infinite;
 				transform: rotate(-200deg);
 }
-
 @keyframes spring-spinner-animation {
 				0% {
 								border-width: calc(60px / 7);
@@ -1186,17 +1025,14 @@
 								border-width: calc(60px / 7);
 				}
 }
-
 .looping-rhombuses-spinner, .looping-rhombuses-spinner * {
 				box-sizing: border-box;
 }
-
 .looping-rhombuses-spinner {
 				width: calc(15px * 4);
 				height: 15px;
 				position: relative;
 }
-
 .looping-rhombuses-spinner .rhombus {
 				height: 15px;
 				width: 15px;
@@ -1208,19 +1044,15 @@
 				transform: translateY(0) rotate(45deg) scale(0);
 				animation: looping-rhombuses-spinner-animation 2500ms linear infinite;
 }
-
 .looping-rhombuses-spinner .rhombus:nth-child(1) {
 				animation-delay: calc(2500ms * 1 / -1.5);
 }
-
 .looping-rhombuses-spinner .rhombus:nth-child(2) {
 				animation-delay: calc(2500ms * 2 / -1.5);
 }
-
 .looping-rhombuses-spinner .rhombus:nth-child(3) {
 				animation-delay: calc(2500ms * 3 / -1.5);
 }
-
 @keyframes looping-rhombuses-spinner-animation {
 				0% {
 								transform: translateX(0) rotate(45deg) scale(0);
@@ -1232,18 +1064,15 @@
 								transform: translateX(-466%) rotate(45deg) scale(0);
 				}
 }
-
 .breeding-rhombus-spinner {
 				height: 65px;
 				width: 65px;
 				position: relative;
 				transform: rotate(45deg);
 }
-
 .breeding-rhombus-spinner, .breeding-rhombus-spinner * {
 				box-sizing: border-box;
 }
-
 .breeding-rhombus-spinner .rhombus {
 				height: calc(65px / 7.5);
 				width: calc(65px / 7.5);
@@ -1254,51 +1083,41 @@
 				position: absolute;
 				animation-iteration-count: infinite;
 }
-
 .breeding-rhombus-spinner .rhombus:nth-child(2n+0) {
 				margin-right: 0;
 }
-
 .breeding-rhombus-spinner .rhombus.child-1 {
 				animation-name: breeding-rhombus-spinner-animation-child-1;
 				animation-delay: calc(100ms * 1);
 }
-
 .breeding-rhombus-spinner .rhombus.child-2 {
 				animation-name: breeding-rhombus-spinner-animation-child-2;
 				animation-delay: calc(100ms * 2);
 }
-
 .breeding-rhombus-spinner .rhombus.child-3 {
 				animation-name: breeding-rhombus-spinner-animation-child-3;
 				animation-delay: calc(100ms * 3);
 }
-
 .breeding-rhombus-spinner .rhombus.child-4 {
 				animation-name: breeding-rhombus-spinner-animation-child-4;
 				animation-delay: calc(100ms * 4);
 }
-
 .breeding-rhombus-spinner .rhombus.child-5 {
 				animation-name: breeding-rhombus-spinner-animation-child-5;
 				animation-delay: calc(100ms * 5);
 }
-
 .breeding-rhombus-spinner .rhombus.child-6 {
 				animation-name: breeding-rhombus-spinner-animation-child-6;
 				animation-delay: calc(100ms * 6);
 }
-
 .breeding-rhombus-spinner .rhombus.child-7 {
 				animation-name: breeding-rhombus-spinner-animation-child-7;
 				animation-delay: calc(100ms * 7);
 }
-
 .breeding-rhombus-spinner .rhombus.child-8 {
 				animation-name: breeding-rhombus-spinner-animation-child-8;
 				animation-delay: calc(100ms * 8);
 }
-
 .breeding-rhombus-spinner .rhombus.big {
 				height: calc(65px / 3);
 				width: calc(65px / 3);
@@ -1309,55 +1128,46 @@
 				animation: breeding-rhombus-spinner-animation-child-big 2s infinite;
 				animation-delay: 0.5s;
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-1 {
 				50% {
 								transform: translate(-325%, -325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-2 {
 				50% {
 								transform: translate(0, -325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-3 {
 				50% {
 								transform: translate(325%, -325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-4 {
 				50% {
 								transform: translate(325%, 0);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-5 {
 				50% {
 								transform: translate(325%, 325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-6 {
 				50% {
 								transform: translate(0, 325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-7 {
 				50% {
 								transform: translate(-325%, 325%);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-8 {
 				50% {
 								transform: translate(-325%, 0);
 				}
 }
-
 @keyframes breeding-rhombus-spinner-animation-child-big {
 				50% {
 								transform: scale(0.5);

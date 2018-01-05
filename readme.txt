@@ -41,4 +41,7 @@ A: It may show up here.
 = 1.0 =
 * First version for wordpress
 
+= 1.0.1 =
+* Rewrite for shortcodes
+
 == Upgrade Notice ==
