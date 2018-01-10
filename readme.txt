@@ -34,14 +34,17 @@ A: Use this plugin's support forum page or send an email to will@radford.online
 A: It may show up here.
 
 == Screenshots ==
+1. Epic Spinners
 
 ==  Changelog  ==
 
-
-= 1.0 =
-* First version for wordpress
+= 1.0.2 =
+* Add sizing options in buttons for wordpress editor
 
 = 1.0.1 =
 * Rewrite for shortcodes
+
+= 1.0 =
+* First version for wordpress
 
 == Upgrade Notice ==

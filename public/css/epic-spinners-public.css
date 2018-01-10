@@ -12,7 +12,7 @@
 				height: 55px;
 				width: 55px;
 				border-radius: 50%;
-				perspective: 800px;
+				perspective: 500px;
 }
 .orbit-spinner .orbit {
 				position: absolute;
@@ -80,7 +80,6 @@
 .atom-spinner .spinner-circle {
 				display: block;
 				position: absolute;
-				color: #ff1d5e;
 				font-size: calc(60px * 0.24);
 				top: 50%;
 				left: 50%;
@@ -162,7 +161,7 @@
 								transform: rotate(180deg);
 				}
 				25%, 75% {
-								box-shadow: 26px 0px 0px currentColor, -26px 0px 0px currentColor, 0px 26px 0px currentColor, 0px -26px 0px currentColor, 19px -19px 0px currentColor, 19px 19px 0px currentColor, -19px -19px 0px currentColor, -19px 19px 0px currentColor;
+								box-shadow: calc(70px / 2.7) 0px 0px currentColor, calc(-70px / 2.7) 0px 0px currentColor, 0px calc(70px / 2.7) 0px currentColor, 0px calc(-70px / 2.7) 0px currentColor, calc(70px / 3.7) calc(-70px / 3.7) 0px currentColor, calc(70px / 3.7) calc(70px / 3.7) 0px currentColor, calc(-70px / 3.7) calc(-70px / 3.7) 0px currentColor, calc(-70px / 3.7) calc(70px / 3.7) 0px currentColor;
 				}
 				100% {
 								transform: rotate(360deg);
@@ -174,7 +173,7 @@
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
 				}
 				25%, 75% {
-								box-shadow: 14px 0px 0px currentColor, -14px 0px 0px currentColor, 0px 14px 0px currentColor, 0px -14px 0px currentColor, 10px -10px 0px currentColor, 10px 10px 0px currentColor, -10px -10px 0px currentColor, -10px 10px 0px currentColor;
+								box-shadow: calc(70px / 5) 0px 0px currentColor, calc(-70px / 5) 0px 0px currentColor, 0px calc(70px / 5) 0px currentColor, 0px calc(-70px / 5) 0px currentColor, calc(70px / 7) calc(-70px / 7) 0px currentColor, calc(70px / 7) calc(70px / 7) 0px currentColor, calc(-70px / 7) calc(-70px / 7) 0px currentColor, calc(-70px / 7) calc(70px / 7) 0px currentColor;
 				}
 				100% {
 								box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor;
@@ -194,15 +193,15 @@
 .pixel-spinner .pixel-spinner-inner {
 				width: calc(70px / 7);
 				height: calc(70px / 7);
-				box-shadow: 15px 15px 0 0, -15px -15px 0 0, 15px -15px 0 0, -15px 15px 0 0, 0 15px 0 0, 15px 0 0 0, -15px 0 0 0, 0 -15px 0 0;
+				box-shadow: calc(70px / 4.6) calc(70px / 4.6) 0 0, calc(-70px / 4.6) calc(-70px / 4.6) 0 0, calc(70px / 4.6) calc(-70px / 4.6) 0 0, -15px calc(70px / 4.6) 0 0, 0 calc(70px / 4.6) 0 0, calc(70px / 4.6) 0 0 0, calc(-70px / 4.6) 0 0 0, 0 calc(-70px / 4.6) 0 0;
 				animation: pixel-spinner-animation 2000ms linear infinite;
 }
 @keyframes pixel-spinner-animation {
 				50% {
-								box-shadow: 20px 20px 0px 0px, -20px -20px 0px 0px, 20px -20px 0px 0px, -20px 20px 0px 0px, 0px 10px 0px 0px, 10px 0px 0px 0px, -10px 0px 0px 0px, 0px -10px 0px 0px;
+								box-shadow: calc(70px / 3.7) calc(70px / 3.7) 0px 0px, calc(-70px / 3.7) calc(-70px / 3.7) 0px 0px, calc(70px / 3.7) calc(-70px / 3.7) 0px 0px, calc(-70px / 3.7) calc(70px / 3.7) 0px 0px, 0px calc(70px / 7) 0px 0px, 10px 0px 0px 0px, -10px 0px 0px 0px, 0px -10px 0px 0px;
 				}
 				75% {
-								box-shadow: 20px 20px 0px 0px, -20px -20px 0px 0px, 20px -20px 0px 0px, -20px 20px 0px 0px, 0px 10px 0px 0px, 10px 0px 0px 0px, -10px 0px 0px 0px, 0px -10px 0px 0px;
+								box-shadow: calc(70px / 3.7) calc(70px / 3.7) 0px 0px, calc(-70px / 3.7) calc(-70px / 3.7) 0px 0px, calc(70px / 3.7) calc(-70px / 3.7) 0px 0px, calc(-70px / 3.7) calc(70px / 3.7) 0px 0px, 0px calc(70px / 7) 0px 0px, 10px 0px 0px 0px, -10px 0px 0px 0px, 0px -10px 0px 0px;
 				}
 				100% {
 								transform: rotate(360deg);

@@ -4,11 +4,11 @@
  *
  * Description: Epic Spinners plugin for Wordpress. Simple to use with shortcodes, widgets and editor buttons.
  * Plugin URI: http://radford.online
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Will Radford
  * Author URI: http:/radford.online
- * License: GPLv2
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPLv3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * @package epic-spinners
  * Text Domain: epic-spinners
  * Domain Path: /languages
@@ -33,7 +33,7 @@ class epic_spinners {
 	 * This plugin's version
 	 */
 
-	const VERSION = '1.0.1';
+	const VERSION = '1.0.2';
 
 	/**
 	 * This plugin's folder name and location, text domain (also slug name for wordpress.org)
@@ -208,7 +208,6 @@ class epic_spinners {
 
 	function enqueue_styles_inline_public($inline_css="") {
 		// epic spinners public css
-		//wp_enqueue_style( self::NAME, plugin_dir_url( __FILE__ ) . 'public/css/epic-spinners-public.css', array(), self::VERSION, 'all' );
 		wp_register_style( 'epic-spinners-public-inline', false );
 		wp_enqueue_style( 'epic-spinners-public-inline' );
 		wp_add_inline_style( 'epic-spinners-public-inline', $inline_css );
@@ -342,7 +341,7 @@ class epic_spinners {
 			$spinner_size = '60px';
 		}
 			ob_start();
-			echo $this->epic_spinners_html_output( $nick_name, $spinner_color, $spinner_size   );
+			echo $this->epic_spinners_html_output( $nick_name, $spinner_color, $spinner_size );
 			return ob_get_clean();
   }
 
@@ -376,109 +375,109 @@ class epic_spinners {
 		}
 		if ($nick_name == "flower-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.flower-spinner-' . $random_string_thingy . '{color:' . $spinner_color  . ';}.flower-spinner-' . $random_string_thingy . ' .bigger-dot{color:' . $spinner_color  . ';background:' . $spinner_color  . ';}.flower-spinner-' . $random_string_thingy . ' .smaller-dot{color:' . $spinner_color  . ';background:' . $spinner_color  . ';}';
-    self::enqueue_styles_inline_public($inline_css);
+		$inline_css = '.flower-spinner-' . $random_string_thingy . '{color:' . $spinner_color  . ';height:' . $spinner_size . ';width:' . $spinner_size. ';}.flower-spinner-' . $random_string_thingy . ' .bigger-dot{color:' . $spinner_color  . ';background:' . $spinner_color  . ';}.flower-spinner-' . $random_string_thingy . ' .smaller-dot{color:' . $spinner_color  . ';background:' . $spinner_color  . ';}.flower-spinner .dots-container{height:calc(' . $spinner_size. '/7)' . ';width:calc(' . $spinner_size. '/7);}@keyframes flower-spinner-bigger-dot-animation{0%,100% {box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor, 0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor;}50%{transform: rotate(180deg);}25%,75% {box-shadow: calc(' . $spinner_size. '/2.7) 0px 0px currentColor, calc(-' . $spinner_size. '/2.7) 0px 0px currentColor, 0px calc(' . $spinner_size. '/2.7) 0px currentColor,0px calc(-' . $spinner_size. '/2.7) 0px currentColor, calc(' . $spinner_size. '/3.7) calc(-' . $spinner_size. '/3.7) 0px currentColor, calc(' . $spinner_size. '/3.7) calc(' . $spinner_size. ' / 3.7) 0px currentColor, calc(-' . $spinner_size. '/3.7) calc(-' . $spinner_size. '/3.7) 0px currentColor, calc(-' .  $spinner_size. '/3.7) calc(' .  $spinner_size. '/3.7) 0px currentColor;}100%{transform: rotate(360deg);box-shadow: 0px 0px 0px currentColor, 0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor;}}@keyframes flower-spinner-smaller-dot-animation{0%,100%{box-shadow:0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor;}25%,75%{box-shadow:calc(' . $spinner_size. '/5) 0px 0px currentColor,calc(-' . $spinner_size. '/5) 0px 0px currentColor,0px calc(' . $spinner_size. '/5) 0px currentColor,0px calc(-' . $spinner_size. '/5) 0px currentColor, calc(' . $spinner_size. '/7) calc(-' . $spinner_size. '/7) 0px currentColor,calc(' . $spinner_size. '/7) calc(' . $spinner_size. '/7) 0px currentColor, calc(-' . $spinner_size. '/7) calc(-' . $spinner_size. '/7) 0px currentColor, calc(-' . $spinner_size. '/7) calc(' . $spinner_size. '/7) 0px currentColor;}100% {box-shadow:0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor,0px 0px 0px currentColor;}}';
+		self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="flower-spinner flower-spinner-' . $random_string_thingy . '"><div class="dots-container"><div class="bigger-dot"><div class="smaller-dot"></div></div></div></div>';
 		}
 		if ($nick_name == "pixel-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.pixel-spinner-' . $random_string_thingy . ' .pixel-spinner-inner{color:' . $spinner_color  . ';background:' . $spinner_color  . ';}';
+		$inline_css = '.pixel-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.pixel-spinner-' . $random_string_thingy . ' .pixel-spinner-inner{color:' . $spinner_color  . ';background:' . $spinner_color  . ';height:calc(' . $spinner_size . '/7);width:calc(' . $spinner_size. '/7);box-shadow:calc(' . $spinner_size . '/4.6) calc(' . $spinner_size . '/4.6) 0 0, calc(-' . $spinner_size . '/4.6) calc(-' . $spinner_size . '/4.6) 0 0, calc(' . $spinner_size . '/4.6) calc(-' . $spinner_size . '/4.6) 0 0, calc(-' . $spinner_size . '/4.6) calc(' . $spinner_size . '/4.6) 0 0, 0 calc(' . $spinner_size . '/4.6) 0 0, calc(' . $spinner_size . '/4.6) 0 0 0, calc(-' . $spinner_size . '/4.6) 0 0 0, 0 calc(-' . $spinner_size . '/4.6) 0 0;}@keyframes pixel-spinner-animation{50%{box-shadow:calc(' . $spinner_size . '/3.7) calc(' . $spinner_size . '/3.7) 0px 0px, calc(-' . $spinner_size . '/3.7) calc(-' . $spinner_size . '/3.7) 0px 0px, calc(' . $spinner_size . '/3.7) calc(-' . $spinner_size . '/3.7) 0px 0px, calc(-' . $spinner_size . '/3.7) calc(' . $spinner_size . '/3.7) 0px 0px, 0px calc(' . $spinner_size . '/7) 0px 0px, calc(' . $spinner_size . '/7) 0px 0px 0px, calc(-' . $spinner_size . '/7) 0px 0px 0px, 0px calc(-' . $spinner_size . '/7) 0px 0px;}75%{box-shadow: calc(' . $spinner_size . '/3.7) calc(' . $spinner_size . '/3.7) 0px 0px, calc(-' . $spinner_size . '/3.7) calc(=' . $spinner_size . '/3.7) 0px 0px, calc(' . $spinner_size . '/3.7) calc(-' . $spinner_size . '/3.7)0px 0px, calc(-' . $spinner_size . '/3.7) calc(' . $spinner_size . '/3.7) 0px 0px, 0px calc(' . $spinner_size . '/3.7) 0px 0px, calc(' . $spinner_size . '/3.7) 0px 0px 0px, calc(-' . $spinner_size . '/3.7) 0px 0px 0px, 0px calc(-' . $spinner_size . '/3.7) 0px 0px;}100%{transform: rotate(360deg);}}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="pixel-spinner pixel-spinner-' . $random_string_thingy . '"><div class="pixel-spinner-inner pixel-spinner-inner"></div></div>';
 		}
 		if ($nick_name == "hollow-dots-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.hollow-dots-spinner-' . $random_string_thingy . ' .dot{color:' . $spinner_color . ';}';
+		$inline_css = '.hollow-dots-spinner-' . $random_string_thingy . '{height:' . $spinner_size. ';width:calc(calc(' . $spinner_size. '*2)*3);}.hollow-dots-spinner-' . $random_string_thingy . ' .dot{height:' . $spinner_size . ';width:' . $spinner_size. ';color:' . $spinner_color . ';margin:0 calc(' . $spinner_size. '/2);border:calc(' . $spinner_size. '/5) solid currentColor;}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="hollow-dots-spinner hollow-dots-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
 		}
 		if ($nick_name == "intersecting-circles-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.intersecting-circles-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
+		$inline_css = '.intersecting-circles-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.intersecting-circles-spinner-' . $random_string_thingy . ' .spinnerBlock{height:calc(' . $spinner_size. '/2);width:calc(' . $spinner_size. '/2);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(2){left:calc(calc(' . $spinner_size. '/2)*-0.36);top:calc(calc(' . $spinner_size. '/2) * 0.2);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(3){left:calc(calc(' . $spinner_size. '/2)*-0.36);top:calc(calc(' . $spinner_size. '/2)*-0.2);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(4){left:0;top:calc(calc(' . $spinner_size. '/2)*-0.36);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(5){left:calc(calc(' . $spinner_size. '/2)*0.36);top:calc(calc(' . $spinner_size. '/2)*-0.2);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(6){left:calc(calc(' . $spinner_size. '/2)*0.36);top:calc(calc(' . $spinner_size. '/2)*0.2);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle:nth-child(7){left:0;top:calc(calc(' . $spinner_size. '/2)*0.36);}.intersecting-circles-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="intersecting-circles-spinner intersecting-circles-spinner-' . $random_string_thingy . '"><div class="spinnerBlock"><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span></div></div>';
 		}
 		if ($nick_name == "radar-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.radar-spinner-' . $random_string_thingy . ' .circle-inner{color:' . $spinner_color . ';}';
+		$inline_css = '.radar-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';} .radar-spinner-' . $random_string_thingy . ' .circle-inner{color:' . $spinner_color . ';}.radar-spinner-' . $random_string_thingy . ' .circle:nth-child(1){padding:calc(' . $spinner_size . '*5*2*0/110);} .radar-spinner-' . $random_string_thingy . ' .circle:nth-child(2){padding:calc(' . $spinner_size . '*5*2*1/110);}.radar-spinner-' . $random_string_thingy . ' .circle:nth-child(3){padding:calc(' . $spinner_size . '*5*2*2/110);}.radar-spinner-' . $random_string_thingy . ' .circle:nth-child(4){padding:calc(' . $spinner_size . '*5*2*3/110);}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="radar-spinner radar-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="circle"><div class="circle-inner-container"><div class="circle-inner"></div></div></div><div class="circle"><div class="circle-inner-container"><div class="circle-inner"></div></div></div><div class="circle"><div class="circle-inner-container"><div class="circle-inner"></div></div></div><div class="circle"><div class="circle-inner-container"><div class="circle-inner"></div></div></div></div>';
 		}
 		if ($nick_name == "scaling-squares-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.scaling-squares-spinner-' . $random_string_thingy . ' .square{color:' . $spinner_color . ';}';
+		$inline_css = '.scaling-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.scaling-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size. '*0.25/1.3);width:calc(' . $spinner_size. '*0.25/1.3);border:calc(' . $spinner_size. '*0.04/1.3) solid currentColor; color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="scaling-squares-spinner scaling-squares-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div></div>';
 		}
 		if ($nick_name == "half-circle-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.half-circle-spinner-' . $random_string_thingy . ' .circle,.circle-1{color:' . $spinner_color . ';}.circle,.circle-2{color:' . $spinner_color . ';}';
+		$inline_css = '.half-circle-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.half-circle-spinner-' . $random_string_thingy . ' .circle{border: calc(' . $spinner_size. ' / 10) solid transparent;}.half-circle-spinner-' . $random_string_thingy . ' .circle,.circle-1{color:' . $spinner_color . ';}.circle,.circle-2{color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="half-circle-spinner half-circle-spinner-' . $random_string_thingy . '"><div class="circle circle-1"></div><div class="circle circle-2"></div></div>';
 		}
 		if ($nick_name == "trinity-rings-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.trinity-rings-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
+		$inline_css = '.trinity-rings-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.trinity-rings-spinner-' . $random_string_thingy . ' .circle:nth-child(1){height:' . $spinner_size . ';width:' . $spinner_size. ';}.trinity-rings-spinner-' . $random_string_thingy . ' .circle:nth-child(2){height:calc(' . $spinner_size . ' * 0.65);width:calc(' . $spinner_size . ' * 0.65);}.trinity-rings-spinner-' . $random_string_thingy . ' .circle:nth-child(3){height:calc(' . $spinner_size . '*0.1);width:calc(' . $spinner_size . '*0.1);}.trinity-rings-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="trinity-rings-spinner trinity-rings-spinner-' . $random_string_thingy . '"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>';
 		}
 		if ($nick_name == "fulfilling-square-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.fulfilling-square-spinner-' . $random_string_thingy . '{color:' . $spinner_color . ';}.fulfilling-square-spinner-' . $random_string_thingy . ' .spinner-inner{background-color:' . $spinner_color . ';}';
+		$inline_css = '.fulfilling-square-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';color:' . $spinner_color . ';}.fulfilling-square-spinner-' . $random_string_thingy . ' .spinner-inner{background-color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="fulfilling-square-spinner fulfilling-square-spinner-' . $random_string_thingy . '"><div class="spinner-inner"></div></div>';
 		}
 		if ($nick_name == "circles-to-rhombuses-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.circles-to-rhombuses-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
+		$inline_css = '.circles-to-rhombuses-spinner-' . $random_string_thingy . '{height:' . $spinner_size . '; width:calc( (' . $spinner_size. ' + ' . $spinner_size. '*1.125)*3 );}.circles-to-rhombuses-spinner-' . $random_string_thingy . ' .circle{height:' . $spinner_size . ';width:' . $spinner_size. ';margin-left:calc(' . $spinner_size. '*1.125);color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="circles-to-rhombuses-spinner circles-to-rhombuses-spinner-' . $random_string_thingy . '"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>';
 		}
 		if ($nick_name == "semipolar-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.semipolar-spinner-' . $random_string_thingy . ' .ring{color:' . $spinner_color . ';}';
+		$inline_css = '.semipolar-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.semipolar-spinner-' . $random_string_thingy . ' .ring{border:calc(' . $spinner_size. '*0.05) solid transparent;border-top-color:' . $spinner_color . ';border-left-color:' . $spinner_color . ';color:' . $spinner_color . ';}.semipolar-spinner-' . $random_string_thingy . ' .ring:nth-child(1){height:calc(' . $spinner_size . ' - ' . $spinner_size . '*0.2*0);width:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*0);top:calc(' . $spinner_size . '*0.1*0);left:calc(' . $spinner_size . '*0.1*0);}.semipolar-spinner-' . $random_string_thingy . ' .ring:nth-child(2){height:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*1);width:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*1);top:calc(' . $spinner_size . '*0.1*1);left:calc(' . $spinner_size . '*0.1*1);}.semipolar-spinner-' . $random_string_thingy . ' .ring:nth-child(3){height:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*2);width:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*2);top:calc(' . $spinner_size . '*0.1*2);left:calc(' . $spinner_size . '*0.1*2);}.semipolar-spinner-' . $random_string_thingy . ' .ring:nth-child(4){height:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*3);width:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*3);top:calc(' . $spinner_size . '*0.1*3);left:calc(' . $spinner_size . '*0.1*3);}.semipolar-spinner-' . $random_string_thingy . ' .ring:nth-child(5){height:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*4);width:calc(' . $spinner_size . '-' . $spinner_size . '*0.2*4);top:calc(' . $spinner_size . '*0.1*4);left: calc(' . $spinner_size . '*0.1*4);}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="semipolar-spinner semipolar-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="ring"></div></div>';
 		}
 		if ($nick_name == "self-building-square-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.self-building-square-spinner-' . $random_string_thingy . ' .square{background:' . $spinner_color . ';}';
+		$inline_css = '.self-building-square-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';top: calc( calc(-' . $spinner_size. ' /4)*2/3);}.self-building-square-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size. '/4);width: calc(' . $spinner_size. '/4);top:calc(calc(-' . $spinner_size. '/4)*2/3);margin-right:calc(calc(' . $spinner_size. '/4)/3);margin-top:calc(calc(' . $spinner_size. '/4)/3);background:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="self-building-square-spinner self-building-square-spinner-' . $random_string_thingy . '"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square clear"></div><div class="square"></div><div class="square"></div><div class="square clear"></div><div class="square"></div><div class="square"></div></div>';
 		}
 		if ($nick_name == "swapping-squares-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.swapping-squares-spinner-' . $random_string_thingy . ' .square{color:' . $spinner_color . ';}';
-    self::enqueue_styles_inline_public($inline_css);
+		$inline_css = '.swapping-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.swapping-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size . '*0.25/1.3);width:calc(' . $spinner_size . '*0.25/1.3);border:calc(' . $spinner_size . '*0.04/1.3) solid currentColor;color:' . $spinner_color . ';}';
+		self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="swapping-squares-spinner swapping-squares-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div></div>';
 		}
 		if ($nick_name == "fulfilling-bouncing-circle-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.fulfilling-bouncing-circle-spinner-' . $random_string_thingy . ' .orbit{color:' . $spinner_color . ';}.fulfilling-bouncing-circle-spinner-' . $random_string_thingy . ' .circle{color:' . $spinner_color . ';}';
+		$inline_css = '.fulfilling-bouncing-circle-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.fulfilling-bouncing-circle-spinner-' . $random_string_thingy . ' .orbit{height:' . $spinner_size . ';width:' . $spinner_size. ';border: calc(' . $spinner_size . '  * 0.03) solid currentColor;color:' . $spinner_color . ';}.fulfilling-bouncing-circle-spinner-' . $random_string_thingy . ' .circle{height:' . $spinner_size . ';width:' . $spinner_size. ';border:calc(' . $spinner_size . '*0.1) solid currentColor;color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="fulfilling-bouncing-circle-spinner fulfilling-bouncing-circle-spinner-' . $random_string_thingy . '"><div class="circle"></div><div class="orbit"></div></div>';
 		}
 		if ($nick_name == "fingerprint-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring{color:' . $spinner_color . ';}';
+		$inline_css = '.fingerprint-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring{color:' . $spinner_color . ';}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(1){height:calc(' . $spinner_size . '/9+0*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+0*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(2){height:calc(' . $spinner_size . '/9+1*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+1*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(3){height: calc(' . $spinner_size . '/9+2*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+2*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(4){height: calc(' . $spinner_size . '/9+3*' . $spinner_size . '/9);width: calc(' . $spinner_size . '/9+3*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(5){height:calc(' . $spinner_size . '/9+4*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+4*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(6){height:calc(' . $spinner_size . '/9+5*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+5*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(7){height:calc(' . $spinner_size . '/9+6*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+6*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(8){height:calc(' . $spinner_size . '/9+7*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+7*' . $spinner_size . '/9);}.fingerprint-spinner-' . $random_string_thingy . ' .spinner-ring:nth-child(9){height:calc(' . $spinner_size . '/9+8*' . $spinner_size . '/9);width:calc(' . $spinner_size . '/9+8*' . $spinner_size . '/9);}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="fingerprint-spinner fingerprint-spinner-' . $random_string_thingy . '"><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div><div class="spinner-ring"></div></div>';
 		}
 		if ($nick_name == "spring-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.spring-spinner-' . $random_string_thingy . ' .spring-spinner-rotator{color:' . $spinner_color . ';}';
+		$inline_css = '.spring-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.spring-spinner-' . $random_string_thingy . ' .spring-spinner-part{height:calc(' . $spinner_size . '/2);width:' . $spinner_size. ';}.spring-spinner-' . $random_string_thingy . ' .spring-spinner-rotator{height:' . $spinner_size . ';width:' . $spinner_size. ';border:calc(' . $spinner_size. '/7) solid transparent;border-right-color: ' . $spinner_color . ';border-top-color:' . $spinner_color . ';color:' . $spinner_color . ';}@keyframes spring-spinner-animation{0%{border-width: calc(' . $spinner_size . '/7);}25%{border-width:calc(' . $spinner_size . '/23.33);}50%{transform: rotate(115deg);border-width:calc(' . $spinner_size . '/7);}75%{border-width:calc(' . $spinner_size . '/23.33);}100%{border-width:calc(' . $spinner_size . '/7);}}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="spring-spinner spring-spinner-' . $random_string_thingy . '"><div class="spring-spinner-part top"><div class="spring-spinner-rotator"></div></div><div class="spring-spinner-part bottom"><div class="spring-spinner-rotator"></div></div></div>';
 		}
 		if ($nick_name == "looping-rhombuses-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.looping-rhombuses-spinner-' . $random_string_thingy . ' .rhombus{color:' . $spinner_color . ';}';
+		$inline_css = '.looping-rhombuses-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:calc(' . $spinner_size. '*4);}.looping-rhombuses-spinner-' . $random_string_thingy . ' .rhombus{height:' . $spinner_size . ';width:' . $spinner_size. ';left:calc(' . $spinner_size. '*4);color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="looping-rhombuses-spinner looping-rhombuses-spinner-' . $random_string_thingy . '"><div class="rhombus"></div><div class="rhombus"></div><div class="rhombus"></div></div>';
 		}
 		if ($nick_name == "breeding-rhombus-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.breeding-rhombus-spinner-' . $random_string_thingy . ' .rhombus{color:' . $spinner_color . ';}';
+		$inline_css = '.breeding-rhombus-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.breeding-rhombus-spinner-' . $random_string_thingy . ' .rhombus{height:calc(' . $spinner_size . '/7.5);width: calc(' . $spinner_size . '/7.5);top:calc(' . $spinner_size . '/2.3077);left:calc(' . $spinner_size . '/2.3077);color:' . $spinner_color . ';}.breeding-rhombus-spinner-' . $random_string_thingy . ' .rhombus.big{height:calc(' . $spinner_size . '/3);width:calc(' . $spinner_size . '/3);top:calc(' . $spinner_size . '/3);left:calc(' . $spinner_size . '/3);}';
 		self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="breeding-rhombus-spinner breeding-rhombus-spinner-' . $random_string_thingy . '"><div class="rhombus child-1"></div><div class="rhombus child-2"></div><div class="rhombus child-3"></div><div class="rhombus child-4"></div><div class="rhombus child-5"></div><div class="rhombus child-6"></div><div class="rhombus child-7"></div><div class="rhombus child-8"></div><div class="rhombus big"></div></div>';
 		}
@@ -683,20 +682,3 @@ function es_admin_get_current_screen() {
         return null;
     return $current_screen->id;
 }
-
-/**
- * overide restricted elements inside tinymce
- * @TODO add specific elements and stop allowing all elements
- *
- * @since    1.0
- *
- */
-
-function es_override_mce_options($initArray)
-{
-  $opts = '*[*]';
-  $initArray['valid_elements'] = $opts;
-  $initArray['extended_valid_elements'] = $opts;
-  return $initArray;
- }
- add_filter('tiny_mce_before_init', 'es_override_mce_options');

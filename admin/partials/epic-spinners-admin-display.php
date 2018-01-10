@@ -6,8 +6,7 @@ if ( !defined( 'WPINC' ) ) {
 
 /**
  * Provides a admin area view for the plugin
- * Plugin URI: https://wordpress.org/plugins/kiip/
- * Version: 3.1.6
+ * Plugin URI: https://github.com/radfordwill/epic-spinners
  * @author     Will Radford <radford.will@gmail.com>
  * @link       http://radford.online/
  * @since      1.0.0
@@ -102,29 +101,7 @@ $epic_spinners_plugin_textarea = $plugin_data->epic_spinners_admin_page_textarea
 		<div class="row">
 			<div class="col-lg-12">
 				<p class="lead"></p>
-				<p class="lead">
-					<strong>
-						<?php _e('Epic Spinners WP Settings', $epic_spinners_plugin_lang)?>
-					</strong>
-				</p>
-				<form method="post" action="options.php">
-					<?php settings_fields( 'epic-spinners-settings-group' ); ?>
-					<?php do_settings_sections( 'epic-spinners-settings-group' ); ?>
-					<table class="form-table">
 
-						<tr valign="top">
-							<th scope="row">
-								<?php _e('Setting', $epic_spinners_plugin_lang)?>
-							</th>
-							<td><input required type="text" name="epic-spinners-setting" value="<?php echo esc_attr( get_option('epic-spinners-setting') ); ?>"/>
-							</td>
-						</tr>
-
-
-
-					</table>
-					<?php submit_button(); ?>
-				</form>
 			</div>
 		</div>
 	</div>
