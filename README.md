@@ -6,7 +6,7 @@
 
 **Donate link:** paypal.me/kiipforwordpress  
 
-**Requires at least:** 3.8
+**Requires at least:** 3.9
 
 **Tested up to:** 5.0
 
