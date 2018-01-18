@@ -16,6 +16,7 @@
  *
  */
 
+if ( ! class_exists( 'epic_spinners' ) ) {
 class epic_spinners {
 	/**
 	 * This plugin's identifier
@@ -80,7 +81,8 @@ class epic_spinners {
 			add_action( 'admin_enqueue_scripts', array( $this,  'enqueue_styles_admin' ) );
 			add_action( 'admin_enqueue_scripts', array( $this,  'enqueue_scripts_admin' ) );
 			// add settings to db from settings api
-			$this->register_settings();
+			//$this->register_settings();
+			add_action('admin_init', array(& $this, 'register_settings'));
 			if ( is_multisite() ) {
 				$admin_menu = 'network_admin_menu';
 				$this->admin_menu_link = self::FOLDERNAME . '/admin/partials/epic-spinners-admin-display.php';
@@ -405,7 +407,7 @@ class epic_spinners {
 		}
 		if ($nick_name == "scaling-squares-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.scaling-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.scaling-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size. '*0.25/1.3);width:calc(' . $spinner_size. '*0.25/1.3);border:calc(' . $spinner_size. '*0.04/1.3) solid currentColor; color:' . $spinner_color . ';}';
+		$inline_css = '.scaling-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.scaling-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size. ' * 0.25 / 1.3);width:calc(' . $spinner_size. ' * 0.25 / 1.3);border:calc(' . $spinner_size. ' * 0.04 / 1.3) solid currentColor; color:' . $spinner_color . ';}';
     self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="scaling-squares-spinner scaling-squares-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div></div>';
 		}
@@ -447,7 +449,7 @@ class epic_spinners {
 		}
 		if ($nick_name == "swapping-squares-spinner") {
 		$random_string_thingy = self::generateRandomString(10);
-		$inline_css = '.swapping-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.swapping-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size . '*0.25/1.3);width:calc(' . $spinner_size . '*0.25/1.3);border:calc(' . $spinner_size . '*0.04/1.3) solid currentColor;color:' . $spinner_color . ';}';
+		$inline_css = '.swapping-squares-spinner-' . $random_string_thingy . '{height:' . $spinner_size . ';width:' . $spinner_size. ';}.swapping-squares-spinner-' . $random_string_thingy . ' .square{height:calc(' . $spinner_size . '*0.25/1.3);width:calc(' . $spinner_size . '*0.25/1.3);color:' . $spinner_color . ';}';
 		self::enqueue_styles_inline_public($inline_css);
 		$output_html = '<div class="swapping-squares-spinner swapping-squares-spinner-' . $random_string_thingy . '" :style="spinnerStyle"><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div></div>';
 		}
@@ -552,7 +554,7 @@ class epic_spinners {
 
 	function epic_spinners_plugin_action_link( $links ) {
 		$links = array_merge( array(
-			'<i class="wp-menu-image dashicons-before dashicons-admin-tools"></i><a href="' . esc_url( admin_url( 'admin.php?page=epic-spinners/admin/partials/epic-spinners-admin-display.php' ) ) . '">' . __( 'Settings', epic_spinners::TEXTDOMAIN ) . '</a> | <i class="wp-menu-image dashicons-before dashicons-share-alt"></i><a href="' . esc_url( 'https://paypal.me/kiipforwordpress' ) . '" style="color:#00ff0a; font-weight:bold;">' . __( 'Donate', epic_spinners::TEXTDOMAIN ) . '</a>'
+			'<i class="wp-menu-image dashicons-before dashicons-admin-tools"></i><a href="' . esc_url( admin_url( 'admin.php?page=epic-spinners/admin/partials/epic-spinners-admin-display.php' ) ) . '">' . __( 'Settings', epic_spinners::TEXTDOMAIN ) . '</a> | <i class="wp-menu-image dashicons-before dashicons-share-alt"></i><a href="' . esc_url( 'https://paypal.me/kiipforwordpress' ) . '" style="color:#00ff0a; font-weight:bold;">' . __( 'Donate', epic_spinners::TEXTDOMAIN ) . '</a> | <i class="wp-menu-image dashicons-before dashicons-star-filled"></i><a href="' . esc_url( 'https://wordpress.org/support/plugin/epic-spinners/reviews/' ) . '">' . __( 'Review', epic_spinners::TEXTDOMAIN ) . '</a>'
 		), $links );
 		return $links;
 	}
@@ -636,6 +638,7 @@ class epic_spinners {
     return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
 }
 
+}
 }
 /**
  * The instantiated version of this plugin's main class
