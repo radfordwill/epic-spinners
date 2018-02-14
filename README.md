@@ -8,7 +8,7 @@
 
 **Requires at least:** 3.9
 
-**Tested up to:** 5.0
+**Tested up to:** 4.9.4
 
 Requires PHP: 5.6
 
