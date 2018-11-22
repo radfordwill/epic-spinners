@@ -8,7 +8,7 @@ if ( !defined( 'WPINC' ) ) {
  * Provides a admin area view for the plugin
  * Plugin URI: https://github.com/radfordwill/epic-spinners
  * @author     Will Radford <radford.will@gmail.com>
- * @link       http://radford.online/
+ * @link       https://github.com/radfordwill/
  * @since      1.0.0
  *
  * @package epic-spinners

@@ -3,10 +3,10 @@
  * Plugin Name: Epic Spinners For Wordpress
  *
  * Description: Epic Spinners plugin for Wordpress. Simple to use with shortcodes, widgets and editor buttons.
- * Plugin URI: http://radford.online
+ * Plugin URI: https://github.com/radfordwill/epic-spinners
  * Version: 1.0.2
  * Author: Will Radford
- * Author URI: http:/radford.online
+ * Author URI: https://github.com/radfordwill/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * @package epic-spinners

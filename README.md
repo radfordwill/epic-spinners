@@ -8,7 +8,7 @@
 
 **Requires at least:** 3.9
 
-**Tested up to:** 4.9.4
+**Tested up to:** 4.9.8
 
 Requires PHP: 5.6
 
@@ -40,7 +40,7 @@ See the github repo: https://github.com/radfordwill/epic-spinners
 
 ### Q: I have a problem to report
 
-A: Use this plugin's support forum page or send an email to will@radford.online
+A: Use this plugin's support forum page or send an email to radford.will@gmail.com
 
 
 ### Q: Ask a question

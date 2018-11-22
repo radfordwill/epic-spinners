@@ -73,7 +73,7 @@ msgid "Epic Spinners For Wordpress"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://radford.online"
+msgid "https://github.com/radfordwill/epic-spinners"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -87,5 +87,5 @@ msgid "Will Radford"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http:/radford.online"
+msgid "https://github.com/radfordwill/"
 msgstr ""
